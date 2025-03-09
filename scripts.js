@@ -19,33 +19,10 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('visible');
     }
   });
-}, { threshold: 0.1 });
-
-sections.forEach(section => {
-  observer.observe(section);
-});
+}, { threshold: 0.3 }); // Trigger when 10% of the element is visible
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("nav-toggle");
-    const navbar = document.getElementById("navbar");
-    const overlay = document.getElementById("navbar-overlay");
-    const logoutButton = document.getElementById("logout");
+// Observe all sections and projects
+sections.forEach((section) => observer.observe(section));
 
-    // Toggle menu visibility
-    function toggleMenu() {
-        const isOpen = navbar.classList.contains("open");
-        navbar.classList.toggle("open");
-        overlay.classList.toggle("open");
-    }
 
-    toggleButton.addEventListener("click", toggleMenu);
-    overlay.addEventListener("click", toggleMenu); // Close menu on clicking the overlay
-
-    // Logout function (simulate redirect or action)
-    logoutButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
-        alert("Logging out...");
-        // Here you could redirect: window.location.href = "/Signin.html";
-    });
-});
