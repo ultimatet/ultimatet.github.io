@@ -242,7 +242,14 @@ section h2 {
     height: 60px;
     object-fit: contain;
 }
-
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 /* Experience Section */
 .job {
     margin-bottom: 30px;
@@ -271,80 +278,4 @@ hr {
     background-color: #ccc;
     width: 60%;
     margin: 40px auto;
-}
-
-/* ✅ MOBILE RESPONSIVE STYLES */
-@media (max-width: 1024px) {
-    #hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #hero img {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    .Navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .Navbar ul {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project img {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    #skills {
-        white-space: normal;
-        text-align: center;
-    }
-
-    .skills-list {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .skills-list img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    #hero h1 {
-        font-size: 2em;
-    }
-
-    #hero h2 {
-        font-size: 1.5em;
-    }
-
-    #hero p {
-        font-size: 1.2em;
-    }
-
-    .btn {
-        padding: 8px 16px;
-    }
-
-    .project img {
-        width: 100%;
-    }
-
-    .skills-list img {
-        width: 40px;
-        height: 40px;
-    }
 }
