@@ -167,6 +167,18 @@ section h2 {
     padding: 20px;
     border-radius: 15px;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+.project img {
+    width: 30%;
+    border-radius: 10px;
+    right: 0;
+    max-height: 40vh;
+    max-width: 40vh;
 }
 
 .project h3 {
@@ -243,6 +255,18 @@ section h2 {
     to {
         transform: translateX(-100%);
     }
+}
+
+/*Experience section*/
+.job {
+    margin-bottom: 30px;
+    background-color: #1C1C1C;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 /*back-to-top btn*/
