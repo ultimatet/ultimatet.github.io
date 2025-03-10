@@ -160,6 +160,10 @@ section h2 {
     padding: 20px 120px;
 }
 
+/* About Section */
+#about {
+    padding: 10vh 40vh;
+}
 /* Projects Section */
 #projects h2 {
     margin-top: 0px;
@@ -230,6 +234,12 @@ section h2 {
     display: flex;
     gap: 15px;
     animation: slide 10s linear infinite;
+    width: 100%;
+}
+.skills-list::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
 }
 
 .skills-list img {
@@ -247,7 +257,7 @@ section h2 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-60%);
     }
 }
 /* Experience Section */
