@@ -27,7 +27,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #0A0A0A; */
+    padding: 15px;
 }
 
 .Navbar ul {
@@ -46,27 +46,27 @@ a:hover {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: background-color 0.3 ease;
+    transition: background-color 0.3s ease;
     border-radius: 5px;
 }
 
 .Navbar a:hover {
     background-color: #0A196A;
 }
+
 #cv {
     font-weight: 780;
     font-style: oblique;
 }
 
-
 /* Hero Section */
 #hero {
     text-align: left;
-    padding:10vh;
-    /* background-color: #0A0A0A; */
+    padding: 10vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
 }
 
 #hero h1 {
@@ -89,19 +89,18 @@ a:hover {
     max-width: 350px;
     border-radius: 5px;
 }
+
 /* Social Media Icons */
 #social img {
     width: 20%;
     max-width: 40px;
     padding: 5px;
-    
 }
+
 .hero-text #contact {
     font-size: 2em;
     background-color: #0A0A0A;
-    font-family: Brush Script MT,
-        Brush Script Std,
-        cursive;
+    font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 .btn {
@@ -131,13 +130,16 @@ section p {
     font-size: 1.2em;
     color: #FFFFFF;
 }
+
 section h2 {
     font-size: 1.5em;
 }
+
 section h3 {
     font-size: 1.3em;
     color: #007BFF;
 }
+
 section ul {
     list-style: none;
     padding: 0;
@@ -157,10 +159,12 @@ section h2 {
 #about {
     padding: 20px 120px;
 }
+
 /* Projects Section */
 #projects h2 {
     margin-top: 0px;
 }
+
 .project {
     margin-bottom: 30px;
     background-color: #1C1C1C;
@@ -173,10 +177,10 @@ section h2 {
     justify-content: space-evenly;
     gap: 20px;
 }
+
 .project img {
     width: 30%;
     border-radius: 10px;
-    right: 0;
     max-height: 40vh;
     max-width: 40vh;
 }
@@ -185,14 +189,16 @@ section h2 {
     color: #007BFF;
 }
 
-.project-container{
+.project-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 10px;
     overflow: hidden;
 }
-#project1, #project3 {
+
+#project1,
+#project3 {
     transform: translateX(-10%);
     opacity: 0;
 }
@@ -202,11 +208,9 @@ section h2 {
     opacity: 0;
 }
 
-
 #projects .project.animation {
     transform: translateX(0%) translateY(0%);
     opacity: 1;
-
 }
 
 /* Skills Section */
@@ -218,9 +222,8 @@ section h2 {
 }
 
 .skills-container {
-    width: 100%;   
+    width: 100%;
     display: flex;
-
 }
 
 .skills-list {
@@ -240,24 +243,7 @@ section h2 {
     object-fit: contain;
 }
 
-/* Duplicating the list for infinite effect */
-.skills-list::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/*Experience section*/
+/* Experience Section */
 .job {
     margin-bottom: 30px;
     background-color: #1C1C1C;
@@ -269,7 +255,7 @@ section h2 {
     flex-direction: column;
 }
 
-/*back-to-top btn*/
+/* Back-to-top button */
 #top {
     display: inline-flex;
     position: absolute;
@@ -281,13 +267,84 @@ section h2 {
 
 hr {
     border: 0;
-    /* Remove default border */
     height: 1px;
-    /* Set line thickness */
     background-color: #ccc;
-    /* Line color */
     width: 60%;
-    /* Set the width of the line */
     margin: 40px auto;
-    /* Add space above and below the line */
+}
+
+/* ✅ MOBILE RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .Navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Navbar ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #skills {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .skills-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-list img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .skills-list img {
+        width: 40px;
+        height: 40px;
+    }
 }
