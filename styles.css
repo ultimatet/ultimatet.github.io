@@ -2,7 +2,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
-    background-color: #0A0A0A;
+    background: linear-gradient(95deg, #0A0A0A, #06032b);
     margin: 0;
     padding: 0;
 }
@@ -27,6 +27,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: #0A0A0A; */
 }
 
 .Navbar ul {
@@ -62,7 +63,7 @@ a:hover {
 #hero {
     text-align: left;
     padding:10vh;
-    background-color: #0A0A0A;
+    /* background-color: #0A0A0A; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -165,6 +166,7 @@ section h2 {
     background-color: #1C1C1C;
     padding: 20px;
     border-radius: 15px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .project h3 {
@@ -178,37 +180,21 @@ section h2 {
     gap: 10px;
     overflow: hidden;
 }
-/* Initial state for projects */
-/* Animation classes */
-
-#project1 {
-    animation: slide-left 3s ease ;
+#project1, #project3 {
+    transform: translateX(-10%);
+    opacity: 0;
 }
 
 #project2 {
-    animation: slide-right 3s ease ;
+    transform: translateX(10%);
+    opacity: 0;
 }
 
-#project3 {
-    animation: slide-left 3s ease ;
-}
-@keyframes slide-left {
-    from {
-        transform: translateX(-100%);
-    }
 
-    to {
-        transform: translateX(0%);
-    }
-}
-@keyframes slide-right {
-    from {
-        transform: translateX(100%);
-    }
+#projects .project.animation {
+    transform: translateX(0%) translateY(0%);
+    opacity: 1;
 
-    to {
-        transform: translateX(0%);
-    }
 }
 
 /* Skills Section */
