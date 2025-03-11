@@ -254,6 +254,12 @@ section h2 {
     object-fit: contain;
     margin: 0 10px;
 }
+.skills-list img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
 @keyframes slide {
     0% {
         transform: translateX(0%);
