@@ -227,13 +227,14 @@ section h2 {
 
 .skills-container {
     width: 100%;
-    display: flex;
+    
 }
 
 .skills-list {
-    display: flex;
+    display: inline-flex;
     gap: 15px;
-    animation: slide 10s linear infinite;
+    animation: slide 8s linear infinite;
+    white-space: nowrap;
     width: 100%;
 }
 .skills-list::after {
@@ -251,10 +252,11 @@ section h2 {
     width: 60px;
     height: 60px;
     object-fit: contain;
+    margin: 0 10px;
 }
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(0%);
     }
     100% {
         transform: translateX(-60%);
