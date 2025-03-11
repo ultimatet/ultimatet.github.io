@@ -377,6 +377,11 @@ hr {
         gap: 25px;
         /* Increase gap between icons */
     }
+    .skills-list::after {
+        content: "";
+        display: inline-block;
+        width: 50%;
+    }
 
     .skills-list img {
         width: 40px;
@@ -393,7 +398,7 @@ hr {
         }
 
         100% {
-            transform: translateX(-100%);
+            transform: translateX(-300%);
         }
     }
 }
