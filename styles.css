@@ -289,3 +289,133 @@ hr {
     width: 60%;
     margin: 40px auto;
 }
+
+/* Mobile friendly css */
+
+/* General responsive adjustments */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 5vh 3vh;
+    }
+
+    #about {
+        padding: 5vh 3vh;
+    }
+
+    h1 {
+        font-size: 2.2em !important;
+    }
+
+    h2 {
+        font-size: 1.8em !important;
+    }
+
+    p {
+        font-size: 1em !important;
+    }
+}
+
+/* Navigation bar adjustments for mobile */
+@media screen and (max-width: 768px) {
+    .Navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Navbar {
+        padding: 10px 0;
+    }
+
+    .Navbar a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Hero section adjustments */
+@media screen and (max-width: 768px) {
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 5vh 3vh;
+    }
+
+    #hero img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    #social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #social img {
+        width: 40px;
+        max-width: none;
+    }
+}
+
+/* Project section adjustments */
+@media screen and (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 90%;
+        margin-top: 15px;
+    }
+}
+
+/* Skills section adjustments */
+@media screen and (max-width: 768px) {
+    .skills-list {
+        gap: 25px;
+        /* Increase gap between icons */
+    }
+
+    .skills-list img {
+        width: 40px;
+        height: 40px;
+        padding: 8px 15px;
+        margin: 0 5px;
+        /* Add horizontal margin */
+    }
+
+    /* Adjust animation speed for mobile */
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+/* Contact section adjustments */
+@media screen and (max-width: 768px) {
+    #top {
+        position: static;
+        margin-top: 20px;
+        width: 40px;
+    }
+
+    #contact {
+        position: relative;
+    }
+}
+
+/* Fix animations for small screens */
+@media screen and (max-width: 768px) {
+
+    #project1,
+    #project2,
+    #project3 {
+        transform: translateX(0);
+    }
+}
